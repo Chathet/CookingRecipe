@@ -11,8 +11,8 @@ app.use(cors())
 app.use(bodyparser.urlencoded({ extended: true }))
 app.use(bodyparser.json())
 
-var userName
-var userAge
+let userName
+let userAge
 
 app.get('/', (req, res) => {
   if(!userName){
