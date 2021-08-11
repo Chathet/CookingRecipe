@@ -33,6 +33,7 @@ app.post('/',(req, res) => {
   res.send("Name: " + userName + " , " + "Age: " + userAge)
 })
 
+
 app.delete('/',(req, res) => {
   userName = undefined
   userAge = undefined

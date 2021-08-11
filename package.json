@@ -1,7 +1,6 @@
 {
   "name": "cookingrecipe",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start:dev": "nodemon src/app.js",
@@ -13,5 +12,22 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chathet/CookingRecipe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chathet/CookingRecipe/issues"
+  },
+  "homepage": "https://github.com/Chathet/CookingRecipe#readme",
+  "description": ""
 }
