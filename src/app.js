@@ -26,7 +26,6 @@ app.get('/api/users/:id', async (req, res) => {
   {
     return res.status(200).json(user)
   })
-  //return res.json({"error": "User doesn't exist"})
 })
 
 app.post('/api/users',(req, res) => {
@@ -35,30 +34,13 @@ app.post('/api/users',(req, res) => {
           message: "Name and age have to be provided"
       })
   }
-  
-mongoose.model('users').insertOn
-//   mongoClient.connect(connectionURL, { useNewUrlParser: true }, (error,client)=>{
-//     if(error)
-//     {
-//         return console.log('Unable to connect to database!')
-//     }
 
-//     const db = client.db(databaseName)
-
-//     db.collection('users').insertOne({
-//         name: req.body.name,
-//         age: req.body.age
-//     }, (error,result) => {
-//         if(error)
-//         {
-//             return console.log('Unable to insert user')
-//         }
-
-//         console.log(result.insertedId)
-//     })
-// })
-
-//   return res.status(201).json(req.body)
+  let newUser = new user.user({ name: req.body.name,age: req.body.age })
+  newUser.save(function (err) {
+    if (err) return handleError(err);
+    // saved!
+  })
+  res.status(201).json(newUser)
 
 })
 
